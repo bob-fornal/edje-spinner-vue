@@ -1,0 +1,23 @@
+{
+  "name": "edje-spinner-vue",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "delete-spinner": "npx rimraf src/assets/edje-spinner",
+    "make-spinner": "mkdirp src/assets/edje-spinner",
+    "copy-spinner": "cp node_modules/edje-spinner/dist/*.* src/assets/edje-spinner",
+    "process-spinner": "npm run delete-spinner && npm run make-spinner && npm run copy-spinner",
+    "dev": "npm run process-spinner && vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "edje-spinner": "github:bob-fornal/edje-spinner",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.8"
+  }
+}
